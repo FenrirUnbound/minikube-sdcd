@@ -115,11 +115,11 @@ $ echo '192.168.99.xxx my.sd api.my.sd' >> /etc/hosts
 
 ### Deploy
 
-Ensure that your `kubectl` configuration is pointing to your minikube cluster. Once that's confirmed, you can simly run the `ks deploy default` command.
+Ensure that your `kubectl` configuration is pointing to your minikube cluster. Once that's confirmed, you can simly run the `ks apply default` command.
 
 ```
 # deploy it to the minikube cluster
-$ ks deploy default
+$ ks apply default
 ```
 
 ## Limitations
@@ -136,3 +136,4 @@ There are 2 ways to resolving this:
 
 1. Increase the size of your minikube cluster. This may be difficult if your local workstation does not have the hardware capacity for it.
 1. Explicitly define your builds with a `Micro CPU`/`Micro Memory` annotation. See [Annotations page](https://docs.screwdriver.cd/user-guide/configuration/annotations) for specific details.
+1. Override the default values for `K8S_CPU_LOW`/`K8S_MEMORY_LOW` resource definitions. See [Executor Plugin](https://docs.screwdriver.cd/cluster-management/configure-api#configuration) section.
