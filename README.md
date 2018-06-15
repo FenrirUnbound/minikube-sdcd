@@ -132,7 +132,7 @@ Since it's running a single-node cluster, there are some limitations that should
 
 By default, a build will run with a `Low CPU`/`Low Memory` resource requirement. As of writing, this requires 2 CPU cores & 2GB of RAM. If your minikube cluster isn't allocated enough resources, builds will not dequeue until the cluster has enough capacity to allow the builds to run. 
 
-There are 2 ways to resolving this:
+There are 3 ways to resolving this:
 
 1. Increase the size of your minikube cluster. This may be difficult if your local workstation does not have the hardware capacity for it.
 1. Explicitly define your builds with a `Micro CPU`/`Micro Memory` annotation. See [Annotations page](https://docs.screwdriver.cd/user-guide/configuration/annotations) for specific details.
